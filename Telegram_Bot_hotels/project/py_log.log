@@ -1,0 +1,11 @@
+INFO:root:An INFO
+WARNING:root:A WARNING
+ERROR:root:An ERROR
+CRITICAL:root:A message of CRITICAL severity
+INFO:root:
+Рим: 3023
+INFO:root:{184341981: [27-02-23 15:52:53|HighPrice, 27-02-23 15:54:52|LowPrice, 27-02-23 15:58:10|LowPrice, 27-02-23 15:59:14|LowPrice, 27-02-23 15:59:37|LowPrice, 27-02-23 16:01:11|BestDeal, 28-02-23 13:50:17|LowPrice, 28-02-23 13:51:59|HighPrice, 28-02-23 13:53:02|BestDeal, 28-02-23 13:53:05|BestDeal, 28-02-23 15:01:38|HighPrice, 28-02-23 15:18:45|HighPrice, 28-02-23 15:19:38|LowPrice, 28-02-23 15:30:29|LowPrice, 28-02-23 15:34:04|LowPrice, 28-02-23 16:03:34|LowPrice, 28-02-23 16:04:19|LowPrice, 28-02-23 16:09:31|HighPrice, 28-02-23 16:15:51|LowPrice, 28-02-23 16:17:21|BestDeal, 28-02-23 16:19:03|HighPrice, 28-02-23 16:25:32|LowPrice, 28-02-23 16:32:26|HighPrice, 28-02-23 16:38:57|HighPrice, 28-02-23 17:53:34|BestDeal]}
+INFO:root:{184341981: [27-02-23 15:52:53|HighPrice, 27-02-23 15:54:52|LowPrice, 27-02-23 15:58:10|LowPrice, 27-02-23 15:59:14|LowPrice, 27-02-23 15:59:37|LowPrice, 27-02-23 16:01:11|BestDeal, 28-02-23 13:50:17|LowPrice, 28-02-23 13:51:59|HighPrice, 28-02-23 13:53:02|BestDeal, 28-02-23 13:53:05|BestDeal, 28-02-23 15:01:38|HighPrice, 28-02-23 15:18:45|HighPrice, 28-02-23 15:19:38|LowPrice, 28-02-23 15:30:29|LowPrice, 28-02-23 15:34:04|LowPrice, 28-02-23 16:03:34|LowPrice, 28-02-23 16:04:19|LowPrice, 28-02-23 16:09:31|HighPrice, 28-02-23 16:15:51|LowPrice, 28-02-23 16:17:21|BestDeal, 28-02-23 16:19:03|HighPrice, 28-02-23 16:25:32|LowPrice, 28-02-23 16:32:26|HighPrice, 28-02-23 16:38:57|HighPrice, 28-02-23 17:53:34|BestDeal]}
+INFO:root:ИД города: 3023, кол-во отелей: 2, условие сортировки: DISTANCE
+INFO:root:{'destination': {'regionId': '3023'}, 'checkInDate': {'day': 10, 'month': 5, 'year': 2023}, 'checkOutDate': {'day': 12, 'month': 5, 'year': 2023}, 'rooms': [{'adults': 1}], 'resultsSize': 2, 'sort': 'DISTANCE', 'filters': {'price': {'min': '1000', 'max': '40000'}}}
+INFO:root:<Response [200]>
