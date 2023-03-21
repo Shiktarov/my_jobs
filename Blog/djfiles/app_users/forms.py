@@ -1,0 +1,30 @@
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from app_users.models import Profile
+
+
+class AuthForm(forms.Form):
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
+
+
+class RegisterForm(UserCreationForm):
+    first_name = forms.CharField(max_length=30, required=False, label='Имя')
+    last_name = forms.CharField(max_length=30, required=False, label='Фамилия')
+    #description = forms.CharField(label='О себе')
+    email = forms.EmailField(max_length=256)
+    date_of_birth = forms.DateField(required=True, label='Дата рождения')
+    city = forms.CharField(max_length=36, required=False, label='Город')
+    phone_number = forms.IntegerField(required=False, label='Номер телефона')
+
+    class Meta:
+        model = User
+        fields = ('username', 'first_name', 'email', 'last_name', 'password1', 'password2')
+
+
+class EditProfileForm(forms.ModelForm):
+
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name']

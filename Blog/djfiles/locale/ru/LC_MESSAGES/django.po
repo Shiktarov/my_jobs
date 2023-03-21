@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-17 13:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: app_blog/apps.py:7
+msgid "blog"
+msgstr "Блог"
+
+#: app_blog/models.py:10
+msgid "title"
+msgstr "заголовок"
+
+#: app_blog/models.py:11
+
+msgid "author"
+msgstr "Автор: "
+
+#: app_blog/models.py:12
+msgid "description"
+msgstr "описание"
+
+#: app_blog/models.py:13
+msgid "created date"
+msgstr "Создано"
+
+#: app_blog/models.py:20
+msgid "posts"
+msgstr "новости"
+
+#: app_blog/models.py:21
+msgid "post"
+msgstr "пост"
+
+#: app_blog/models.py:25 app_blog/models.py:29
+msgid "images"
+msgstr "изображения"
+
+#: app_blog/models.py:26
+
+msgid "image file"
+msgstr "файл изображения"
+
+#: app_blog/models.py:30
+msgid "image"
+msgstr "изображение"
+
+#: app_blog/templates/app_blog/base.html:14
+msgid "Blog News"
+msgstr "Блог Новостей"
+
+#: app_blog/templates/app_blog/base.html:19
+msgid "Create New Post"
+msgstr "Создать Новую новость"
+
+#: app_blog/templates/app_blog/base.html:21
+msgid "My Profile"
+msgstr "Мой профиль"
+
+#: app_blog/templates/app_blog/base.html:22
+msgid "Logout"
+msgstr "Выход"
+
+#: app_blog/templates/app_blog/base.html:24
+msgid "Login"
+msgstr "Вход"
+
+#: app_blog/templates/app_blog/base.html:25
+msgid "Sign in"
+msgstr "Регистрация"
+
+#: app_blog/templates/app_blog/create_post.html:4
+#: app_blog/templates/app_blog/create_post.html:8
+msgid "Create new post"
+msgstr "создать новый пост"
+
+#: app_blog/templates/app_blog/create_post.html:14
+msgid "Create"
+msgstr "Создать"
+
+#: app_blog/templates/app_blog/main.html:5
+msgid "Home page"
+msgstr " Главная страница"
+
+#: app_blog/templates/app_blog/main.html:13
+
+msgid "Created: "
+msgstr "Создано: "
+
+#: app_blog/templates/app_blog/main.html:13
+msgid "Author: "
+msgstr "Автор: "
+
+#: app_users/templates/app_users/account.html:5
+#, fuzzy
+#| msgid "My Profile"
+msgid "My profile"
+msgstr "Мой профиль"
+
+#: app_users/templates/app_users/account.html:9
+msgid "About me"
+msgstr "Обо мне"
+
+#: app_users/templates/app_users/account.html:10
+msgid "Username: "
+msgstr "Никнейм"
+
+#: app_users/templates/app_users/account.html:11
+msgid "Name: "
+msgstr "Имя"
+
+#: app_users/templates/app_users/account.html:12
+msgid "Lastname: "
+msgstr "Фамилия"
+
+#: app_users/templates/app_users/account.html:13
+msgid "Date of Birth:"
+msgstr "Дата рождения"
+
+#: app_users/templates/app_users/account.html:16
+msgid "Phone number:"
+msgstr "Телефон"
+
+#: app_users/templates/app_users/account.html:17
+msgid "City: "
+msgstr "Город"
+
+#: app_users/templates/app_users/account.html:18
+#, fuzzy
+#| msgid "My Profile"
+msgid "Edit Profile"
+msgstr "Мой профиль"
+
+#~ msgid "autor"
+#~ msgstr "автор"

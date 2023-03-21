@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.name }}</title>
+</head>
+<body>
+    <h1>{{ object.name }} </h1>
+    <p>{{ object.description }}</p>
+    <p>{{ object.create_date }}</p>
+    <p>{{ object.edit_date }}</p>
+<h3>Комментарии:</h3>
+{% if comments %}
+    <ul>
+        {% for com in comments %}
+            <li>    {% if request.user.is_authenticated %}
+                 <b>{{ com.user_name }}:
+                     {% endif %}
+                 </b>  {{ com.comment}}
+            </li>
+
+        {% endfor %}
+
+    </ul>
+    {% else %}
+        <p>Комментариев нет</p>
+    {% endif %}
+    {% if perms.auth.change_news %}
+    <a href="{{ object.id }}/edit">Редактировать новость</a>
+    {% endif %}
+    <a href="{{ object.id }}/comment_form/">Добавить комментарий</a>
+</body>
+</html>

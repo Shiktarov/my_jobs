@@ -1,0 +1,43 @@
+{% extends 'app_shop/base.html' %}
+{% load i18n %}
+{% load cache %}
+{% block title %}
+{% trans 'My Profile' %}
+{% endblock %}
+
+{% block content %}
+<h3>{% trans 'About me' %}</h3>
+  {% trans 'Nickname' %}: {{ request.user.username }}<br>
+  {% trans 'Name' %}:{{ user.first_name }}<br>
+  {% trans 'Lastname' %}:  {{ user.last_name }}<br>
+  {% trans 'Balance' %}: {{ user.profile.balance }} <a href="{% url 'balance' %}" >{% trans 'Top Up Balance' %}</a> <br>
+  {% trans 'Status' %}: {{ user.profile.status }}<br>
+  {% trans 'Money Spent' %}: {{ user.profile.points }} <br>
+<br>
+<h3>{% trans 'Recommendation' %}</h3>
+{% for r in offers %}
+    <p>{{ r.name }}
+    <a href="{{ product.get_absolute_url }}">
+
+    <img src="{{ r.image.url }}" width="100" height="100">
+        </a>
+</p>
+
+{% endfor %}
+<br>
+<br>
+{% cache 500 footer %}
+{% if user_orders %}
+<h2>{% trans 'Your Order list:' %}</h2>
+   {% for item in user_order_item %}
+        <h3>{% trans 'Order' %}: № {{ item.order.id }}</h3>
+      <li>{% trans 'Product' %}: {{ item.product.name }}</li>
+        {% trans 'Created' %} {{ item.order.created }}<br>
+==================================================
+    {% endfor %}
+{% endif %}
+{% endcache %}
+
+{% endblock %}
+
+

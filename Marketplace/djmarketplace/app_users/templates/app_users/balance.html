@@ -1,0 +1,13 @@
+{% extends 'app_shop/base.html' %}
+{% load i18n %}
+{% block title %}
+{% trans 'Top Up Balance' %}
+{% endblock %}
+
+{% block content %}
+<h2>{% trans 'Top Up Balance' %}</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="sumbit">{% trans 'Submit' %}</button>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>редактирование</title>
+</head>
+<body>
+  <h2>Редактирование</h2>
+  <form method="post" action="/news_list/{{ profile_id }}/edit">
+      {% csrf_token %}
+      {{ news_form.as_p }}
+      <button type="submit">Сохранить</button>
+
+  </form>
+    <a href="http://localhost:8000/all_news/">Вернуться к списку новостей</a>
+</body>
+</html>

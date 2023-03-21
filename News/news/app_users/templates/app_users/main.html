@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+</head>
+<body>
+{% if request.user.is_authenticated %}
+  <h3>Добро пожаловать на сайт {{request.user.first_name }}</h3>
+  {{ news_list }}
+  <a href="{% url 'news_list' %} ">Список новостей</a>
+  <a href="{% url 'create_news' %}">Создать новость</a>
+    <a href="{% url 'account' %}">Мой профиль</a>
+    <a href="{% url 'another_logout' %}">Выйти</a>
+{% else %}
+  <h3>Вы не авторизованы на нашем сайте</h3>
+  <a href="{% url 'another_login' %}">Войти</a><br>
+    <a href="{% url 'another_register' %}">Зарегистрироваться</a>
+{% endif %}
+<h2>Я - главная страница</h2>
+</body>
+</html>

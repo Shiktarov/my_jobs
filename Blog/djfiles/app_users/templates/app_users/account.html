@@ -1,0 +1,19 @@
+{% extends 'app_blog/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% trans 'My profile' %}
+{% endblock %}
+
+{% block content %}
+<h3>{% trans 'About me' %}</h3>
+  {% trans 'Username: ' %}  {{ request.user.username }}<br>
+  {% trans 'Name: ' %}  {{ user.first_name }}<br>
+  {% trans 'Lastname: ' %}  {{ user.last_name }}<br>
+  {% trans 'Date of Birth:' %} {{ user.profile.date_of_birth }} <br>
+  Email:  {{ user.email }}<br>
+   id:  {{ user.id }}<br>
+   {% trans 'Phone number:' %}  {{ user.profile.phone_number }}<br>
+    {% trans 'City: ' %} {{ user.profile.city }}<br>
+    <a href="{% url 'edit_profile' %}">{% trans 'Edit Profile' %}</a>
+{% endblock %}

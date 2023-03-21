@@ -1,0 +1,16 @@
+{% extends 'app_blog/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% trans "Home page" %}
+{% endblock %}
+
+{% block content %}
+    {% for post in object_list %}
+    <div class="post-entry">
+      <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        {{ post.body|truncatechars:100 }}
+        <p>{% trans 'Created: ' %} {{ post.create_date }} {% trans 'Author: ' %} {{ post.author }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}

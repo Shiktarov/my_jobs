@@ -1,0 +1,13 @@
+{% extends 'app_blog/base.html' %}
+
+{% block title %}
+Авторизация
+{% endblock %}
+
+{% block content %}
+<h2>Страница входа</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="sumbit">Login</button>
+{% endblock %}

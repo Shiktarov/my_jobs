@@ -1,0 +1,17 @@
+<html>
+    <h1>Комментарии</h1>
+    {% if comment %}
+    <ul>
+        {% for com in comment %}
+            <li>
+                <a href="/news_list/{{ com.user_news_id }}">{{ com.user_news }}</a> <b>{{ com.user_name }}:</b>  {{ com.comment}}
+            </li>
+
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>Комментариев нет</p>
+    {% endif %}
+
+<a href="/comment_form/">Добавить комментарий</a>
+</html>

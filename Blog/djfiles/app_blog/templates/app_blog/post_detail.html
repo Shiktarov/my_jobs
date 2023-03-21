@@ -1,0 +1,21 @@
+{% extends 'app_blog/base.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+  <div class="post-entry">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+    {% if images %}
+      {% for i in images %}
+      <img src="{{ MEDIA_URL }}{{ i.image.url }}" width="400" height="500"/>
+      {% endfor %}
+    {% else %}
+    Картинок нет
+    {% endif %}
+
+  </div>
+
+{% endblock content %}

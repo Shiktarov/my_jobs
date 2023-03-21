@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Новости</title>
+</head>
+<body>
+    <form method="post" action="">
+        {% csrf_token %}
+        {{ comment_form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+</html>

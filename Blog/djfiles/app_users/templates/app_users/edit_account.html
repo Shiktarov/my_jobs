@@ -1,0 +1,14 @@
+{% extends 'app_blog/base.html' %}
+
+{% block title %}
+Редактировать аккаунт
+{% endblock %}
+
+{% block content %}
+<h2>Редактировать информацию о себе</h2>
+<form method="post" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Редактировать</button>
+    </form>
+{% endblock %}
